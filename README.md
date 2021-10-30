@@ -1,3 +1,4 @@
+
 # songr
 
 - This application help you to save your faviorate Albums and also can add songs to albums 
@@ -14,3 +15,6 @@
 * Run application by click on rin button on top 
 
 *Test application by run tests on test folder or by type "./gradlew test" on ubuntu
+
+
+
