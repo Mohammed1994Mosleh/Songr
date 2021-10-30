@@ -9,28 +9,9 @@
 
 <body>
     <a href="http://localhost:8080">Home</a>
-    <a href="http://localhost:8080/song">Browse Songs</a>
-    <h1 class="mainTitle">Your Favorites Albums</h1>
+    <a href="http://localhost:8080/song">Songs</a>
+    <h1 class="mainTitle">Albums</h1>
     <main>
-        <div class="form">
-            <h1>Add new Albums</h1>
-            <br />
-            <form th:action="@{/postaddalbum}" method="post">
-                <br />
-                <p>title: <input type="text" field="*{title}" name="title" required /></p>
-                <br />
-                <p>artist: <input type="text" field="*{artist}" name="artist" required /></p>
-                <br />
-                <p>songCount: <input type="number" min="1" field="*{songCount}" name="songCount" required /></p>
-                <br />
-                <p>length: <input type="number" field="*{length}" name="length" required /></p>
-                <br />
-                <p>imageUrl: <input type="text" field="*{imageUrl}" name="imageUrl" required /></p>
-                <br />
-                <p><input type="submit" value="Add A new Album" /></p>
-                <br />
-            </form>
-        </div>
 
         <div class="albumsHolder">
             <div th:each="album : ${Albums}" class="albumDiv">

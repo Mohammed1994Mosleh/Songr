@@ -10,6 +10,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import repository.AlbumsRepository;
 import repository.SongRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -23,7 +24,17 @@ public class AlbumController {
 
     @GetMapping("/albums")
     public String getAlbumList(Model model) {
-        model.addAttribute("Albums" , albumsRepo.findAll());
+        ArrayList <Album> tesList=new ArrayList<>();
+
+        Album testAlbum1=new Album("Kifk Enta","Fayrouz",500,400,"https://i.ytimg.com/vi/LL5WYA3TOTQ/hqdefault.jpg");
+        Album testAlbum2=new Album("Natali","Hossam Tahseen Beik",500,400,"https://i.ytimg.com/vi/kDPE3H6tQGo/hqdefault.jpg");
+        Album testAlbum3=new Album("Qolee Ohibk","Kathem Al-Saher",1000,500,"hhttps://i1.sndcdn.com/avatars-000251131949-55rvs8-t500x500.jpg");
+        tesList.add(testAlbum1);
+        tesList.add(testAlbum2);
+        tesList.add(testAlbum3);
+
+
+        model.addAttribute("Albums" ,tesList);
         return "albums.html";
     }
 

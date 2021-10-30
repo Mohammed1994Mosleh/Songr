@@ -16,53 +16,32 @@ class SongrApplicationTests {
 	// Test album Class
 	@Test public void albumConstructor(){
 
-		testAlbum = new Album("Thank you Allah" , "Maher zain" , 10 , 2500 , "https://i.ytimg.com/vi/BfStqxizSDM/maxresdefault.jpg");
+		Album testAlbum1=new Album("Kifk Enta","Fayrouz",500,400,"https://i.ytimg.com/vi/LL5WYA3TOTQ/hqdefault.jpg");
 
 		/* Test Constructor */
-		assertTrue(testAlbum instanceof Album);
+		assertTrue(testAlbum1 instanceof Album);
 
-		/* Test title setter and getter */
-		testAlbum.setTitle("dreams");
-		assertEquals("dreams", testAlbum.getTitle());
 
-		/* Test artist setter and getter */
-		testAlbum.setArtist("Aseel");
-		assertEquals("Aseel", testAlbum.getArtist());
+		testAlbum1.setTitle("Madrasat Alhob");
+		assertEquals("Madrasat Alhob", testAlbum1.getTitle());
+
+
+		testAlbum1.setArtist("Kathim");
+		assertEquals("Kathim", testAlbum1.getArtist());
 
 		/* Test number of songs setter and getter */
-		testAlbum.setSongCount(5);
-		assertEquals(5, testAlbum.getSongCount());
+		testAlbum1.setSongCount(10);
+		assertEquals(10, testAlbum1.getSongCount());
 
 		/* Test length setter and getter */
-		testAlbum.setLength(3000);
-		assertEquals(3000, testAlbum.getLength());
+		testAlbum1.setLength(100);
+		assertEquals(100, testAlbum1.getLength());
 
 		/* Test image setter setter and getter */
-		testAlbum.setImageUrl("none");
-		assertEquals("none", testAlbum.getImageUrl());
+		testAlbum1.setImageUrl("https://i.ytimg.com/vi/b4nromvjJFc/maxresdefault.jpg");
+		assertEquals("https://i.ytimg.com/vi/b4nromvjJFc/maxresdefault.jpg", testAlbum1.getImageUrl());
 	}
 
-//	 Test Songs Class
-	@Test public void songConstructor(){
-
-		Song testSong = new Song("Thank you Allah" ,  120 , 1 ,testAlbum );
-
-		/* Test Constructor */
-		assertTrue(testSong instanceof Song);
-
-		/* Test title setter and getter */
-		testSong.setTitle("newSong");
-		assertEquals("newSong", testSong.getTitle());
-
-		/* Test artist setter and getter */
-		testSong.setLength(200);
-		assertEquals( 200 , testSong.getLength());
-
-		/* Test number of songs setter and getter */
-		testSong.setTrackNumber(5);
-		assertEquals(5, testSong.getTrackNumber());
-
-	}
 
 
 }
